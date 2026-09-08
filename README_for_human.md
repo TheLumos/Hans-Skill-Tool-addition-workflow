@@ -112,3 +112,5 @@ Read SETUP-NOTES.md in my skill folder before you start.
 
 Tell me which files you'll create or change before you change them.
 ```
+### Once the test is positive -> ping @Dmitriy Schedov on Slack :) 
+
