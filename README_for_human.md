@@ -11,7 +11,8 @@ This is the most demanding part in terms of effort/work, but with a very gentle 
    1. This takes multiple “rounds”; I highly recommend iterating as you build “real stuff” (if possible). You avoid duplicating work, and you learn and build the skill by doing real work, not hypothetical work.
 3. Standardize and make repetitive work programmatic. Think of the parts of the job that actually require an agent to work/reason on them and the parts that don’t. I.e. If you want the output always in the same format, standardize the format into some code (or HTML structure, Markdown, etc) so the agent is not building the same format over and over from scratch; it is inconsistent and burns a lot of tokens (takes more time and $).
 4. You want to hit a point of consistent good results. When that happens, you are good to go.
-5. Make the skill and scripts independent from your desktop. Absolute paths, installed fonts, or files sitting outside the skill folder will break the moment it runs elsewhere, so use Claude Code to find and fix them before trying out on nanoclaw. 
+5. Make the skill and scripts independent from your desktop. Absolute paths, installed fonts, or files sitting outside the skill folder will break the moment it runs elsewhere, so use Claude Code to find and fix them before trying out on nanoclaw.
+   1. Try out your desktop-independent version of your skill, and prompt for any fixes needed.      
 
 Prompt:
 ```text
