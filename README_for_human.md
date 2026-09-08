@@ -11,6 +11,25 @@ This is the most demanding part in terms of effort/work, but with a very gentle 
    1. This takes multiple “rounds”; I highly recommend iterating as you build “real stuff” (if possible). You avoid duplicating work, and you learn and build the skill by doing real work, not hypothetical work.
 3. Standardize and make repetitive work programmatic. Think of the parts of the job that actually require an agent to work/reason on them and the parts that don’t. I.e. If you want the output always in the same format, standardize the format into some code (or HTML structure, Markdown, etc) so the agent is not building the same format over and over from scratch; it is inconsistent and burns a lot of tokens (takes more time and $).
 4. You want to hit a point of consistently good results. When that happens, you are good to go.
+5. Make the skill and scripts independent from your desktop. Absolute paths, installed fonts, or files sitting outside the skill folder will break the moment it runs elsewhere, so use Claude Code to find and fix them before trying out on nanoclaw. 
+
+Prompt:
+```text
+Review my skill and scripts and make them independent from this machine.
+
+Find and fix anything that only works because of my local setup:
+- absolute paths (my home folder, Desktop, Documents)
+- files or assets referenced from outside the skill folder
+- fonts, apps or tools assumed to be installed
+- anything that depends on which directory I run it from
+
+Move every input the skill needs into the skill folder, reference it relatively,
+and write outputs to a path inside the folder. List any dependency that genuinely
+has to be installed, and tell me how to install it.
+
+Then prove it: run the scripts from a different directory and confirm the output
+is identical.
+```
 
 ### Confirm it works “elsewhere” - Install Docker
 
